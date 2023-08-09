@@ -70,25 +70,28 @@
 <script defer src="b5alert.js"></script>
 <script>
     //for demo
+    const randomInt = function () {
+        return Math.floor(Math.random() * 100) + 1;
+    }
     //success
     const form = document.getElementById("demo");
     form.onsubmit = function (e) {
         e.preventDefault();
-        b5alert.success(this, "my message!", "my title!");
+        b5alert.success(this, "my message!", "my title! " + randomInt());
     };
 
     //error
     const form2 = document.getElementById("demo2");
     form2.onsubmit = function (e) {
         e.preventDefault();
-        b5alert.error(this, "my message!", "my title!");
+        b5alert.error(this, "my message!", "my title! " + randomInt());
     };
 
     //error
     const form3 = document.getElementById("demo3");
     form3.onsubmit = function (e) {
         e.preventDefault();
-        b5alert.show(this, 'warning', "my message!", "my title!");
+        b5alert.show(this, 'warning', "my message!", "my title! " + randomInt());
     };
 </script>
 
